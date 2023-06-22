@@ -19,7 +19,7 @@ const Navbar =() =>{
                     <li>Explorar</li>
                     <li>Biblioteca</li>
                     <li className='searchMidDiv'>
-                        <TfiSearch size={'20px'}/>
+                        <span><TfiSearch size={'18px'}/></span>
                         Pesquisar
                     </li>
                 </ul>
