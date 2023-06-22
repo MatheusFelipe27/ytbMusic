@@ -1,6 +1,7 @@
 .listenAgainSongs{
     width: 83%;
     height: 268px;
+    margin-bottom: 60px;
 
     ul{
         list-style: none;
@@ -30,7 +31,12 @@
                     }
                 }
                 .listenAgainImgDiv:hover{
-                    opacity: 0.65;
+                    .listenAgainSongsPrimerImg{
+                        opacity: 0.65;
+                    }
+                    span{
+                        z-index: 1;
+                    }
                 }
             }
 
@@ -67,7 +73,12 @@
                     }
                 }
                 .listenAgainImgSecDiv:hover{
-                    opacity: 0.65;
+                    .listenAgainSongsFirstImg{
+                        opacity: 0.65;
+                    }
+                    span{
+                        z-index: 1;
+                    }
                 }
             }
         }

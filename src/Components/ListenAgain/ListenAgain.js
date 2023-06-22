@@ -1,17 +1,21 @@
 import './ListenAgain.scss'
 import {HiChevronLeft, HiChevronRight} from 'react-icons/hi'
-import Songs from './Songs/Songs'
  
 
-const ListenAgain = () =>{
+const ListenAgain = ( props) =>{
     return(
         <>
             <div className="listenAgain">
                 <div className="listenAgainLeft">
-                    <div className="listenAgainFirst"><span>M</span></div>
+                    {props.logo?
+                    <div className="listenAgainFirst"><span>{props.logo}</span></div>
+                    :""
+                    }
                     <div className="listenAgainSecond">
-                        <span>MATHEUS FELIPE</span>
-                        <span>Ouvir novamente</span>
+                        {props.subtitle?<span style={{textTransform: "uppercase"}}>{props.subtitle}</span>
+                            : <span style={{color:'transparent'}}>*</span>
+                        }
+                        <span>{props.title}</span>
                     </div>
                 </div>
                 <div className="listenAgainRight">
@@ -20,7 +24,6 @@ const ListenAgain = () =>{
                     <button className="btnListenAgain"><HiChevronRight size={'20px'} fontWeight={'bolder'}/></button>
                 </div>
             </div>
-            <Songs/>
         </>
     )
 }
