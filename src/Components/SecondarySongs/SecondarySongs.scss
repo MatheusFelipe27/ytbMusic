@@ -1,0 +1,16 @@
+.SecondarySongs{
+    width: 83%;
+    height: 240px;
+    margin-bottom: 60px;
+
+    ul{
+        list-style: none;
+        display: grid;
+        margin: 0;
+        padding: 0;
+        gap: 4px;
+        grid-template-columns: repeat(3, 421.3px);
+        grid-template-rows: 60px 60px 60px 60px;
+
+    }
+}        
