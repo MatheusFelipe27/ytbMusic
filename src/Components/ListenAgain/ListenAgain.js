@@ -20,7 +20,7 @@ const ListenAgain = ( props) =>{
                 </div>
                 <div className="listenAgainRight">
                     <button>Mais</button>
-                    <button className="btnListenAgain"><HiChevronLeft size={'20px'} fontWeight={'bolder'}/></button>
+                    <button className="btnListenAgain" onClick={()=>console.log("works")} ><HiChevronLeft size={'20px'} fontWeight={'bolder'}/></button>
                     <button className="btnListenAgain"><HiChevronRight size={'20px'} fontWeight={'bolder'}/></button>
                 </div>
             </div>

@@ -6,7 +6,7 @@ const  ContentSecondary= (props) =>{
 
     return(
         
-        <li>
+        <li className='secondaryLi'>
             <div className='contentSecondary'>
                 <div className='imgPlaceSecondary'>
                     <div className='imgInsideSecondary'>
