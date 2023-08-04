@@ -1,5 +1,4 @@
 import React from "react"
-import Navbar from "../../Components/Navbar/Navbar"
 import Choices from "../../Components/Choices/Choices"
 
 import "./Home.scss"
@@ -10,9 +9,8 @@ import Songs from "../../Components/ListenAgain/Songs/Songs"
 const Home=() =>{
     return(
         <>
-            <Navbar/>
-            <Choices/>
             <div className="main">
+                <Choices/>
                 <ListenAgain title="Ouvir novamente" subtitle="matheus felipe" logo="M"/>
                 <Songs/>
                 <ListenAgain title="Escolhas rápidas" subtitle="Iniciar rádio com música"/>

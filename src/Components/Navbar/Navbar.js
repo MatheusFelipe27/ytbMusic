@@ -3,7 +3,6 @@ import {VscPlayCircle} from 'react-icons/vsc'
 import {TfiSearch} from 'react-icons/tfi'
 import {FiMenu} from 'react-icons/fi'
 import { useEffect, useState } from 'react'
-import SideBar from './SideBar/SideBar'
 
 const Navbar =() =>{
     const [navbarFixed, setNavbarFixed] = useState(false);
@@ -39,7 +38,6 @@ const Navbar =() =>{
                     <div className='login'><span>M</span></div>
                 </div>
             </nav>
-            <SideBar/>
         </>
     )
 }
