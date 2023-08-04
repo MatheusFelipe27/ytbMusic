@@ -1,70 +1,100 @@
-.nav{
-    display: flex;
-    height: 80px;
+.navbarFixed {
+    display:flex;
+    position: fixed;
+    left: 0;
+    right: 0;
     justify-content: space-between;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid gray;
+    z-index: 9999;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,31,1) 3%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(2,0,31,1) 97%, rgba(2,0,36,1) 100%);
+}
 
-    .leftSide{
+.navbar{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+}
+
+.leftSide{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    
+    .menuOutside{
         display: flex;
         align-items: center;
-        margin-left: 20px;
-        gap: 2px;
-        cursor: pointer;
-        h2{
-            color: white;
-        }
-        .logo{
+        justify-content: center;
+        width: 60px;
+        .menu{
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 100%;
-            width: 30px;
-            height: 30px;
-            background-color: red;
-        }
-    }
-
-    .midDiv{
-        padding-right: 70px;
-        ul{
-            display: flex;
-            color: gray;
-            font-size: 24px;
-            padding: 0;
-            list-style: none;
-            gap: 30px;
-
-            li{
-                cursor: pointer;
-            }
-            li:hover{
-                color: white;
-            }
-        }
-        .searchMidDiv{
-            display: flex;  
-            gap: 10px;
-        }
-    }
-
-    .rightDiv{
-        display: flex;
-        align-items: center;
-        padding-top: 10px;
-        .listRightDiv{
-            display: flex;
-            margin-right: 20px;
-            gap: 20px;
-        }
-        .login{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 100%;
-            width: 30px;
-            color: white;
-            height: 30px;
-            background-color: #7E57C2;
             cursor: pointer;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            color: white;
         }
+        .menuOutside:hover{
+            border-radius: 100%;
+        }
+        .menu:hover{
+            background-color: #343434;
+        }
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        cursor: pointer;
+    }
+    .logoName{
+        color: white;
+        font-size: 22px;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    .search{
+        padding-left: 20px;
+        position: relative;
+        .searchInput{
+            width: 400px;
+            height: 40px;
+            padding-left: 55px;
+            font-size: 16px;
+            color:white;
+            outline: none;
+            border: gray 1px solid;
+            border-radius: 10px;
+            background-color: #343434;
+        }
+        .searchIcon{
+            position: absolute;
+            top: 14px;
+            left: 40px;
+        }
+    }
+}
+
+.rightDiv{
+    padding-top: 15px;
+    margin-right: 100px;
+    .login{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: 30px;
+        color: white;
+        height: 30px;
+        background-color: #7E57C2;
+        cursor: pointer;
     }
 }

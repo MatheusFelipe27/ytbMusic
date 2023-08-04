@@ -1,36 +1,45 @@
 import './Navbar.scss'
 import {VscPlayCircle} from 'react-icons/vsc'
 import {TfiSearch} from 'react-icons/tfi'
-import {MdCastConnected} from 'react-icons/md'
+import {FiMenu} from 'react-icons/fi'
+import { useEffect, useState } from 'react'
+import SideBar from './SideBar/SideBar'
 
 const Navbar =() =>{
+    const [navbarFixed, setNavbarFixed] = useState(false);
+
+    const updateNavbarPosition = () => {
+        window.scrollY > 0 ? setNavbarFixed(true) :setNavbarFixed(false);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', updateNavbarPosition);
+        return () => {
+          window.removeEventListener('scroll', updateNavbarPosition);
+        };
+      }, []);
+
     return(
         <>
-        <nav className="nav">
-            <div className="leftSide">
-                <div className='logo'>
-                    <VscPlayCircle size={'24px'} color={'#edf0f5'} />
+            <nav className={navbarFixed ? 'navbarFixed' : 'navbar'}>
+                <div className="leftSide">
+                    <div className='menuOutside'>
+                        <span className='menu'> <FiMenu size= {'22px'} color={"#F0000"}/></span>
+                    </div>
+                    <div className='logo'>
+                        <VscPlayCircle size={'18px'} color={'#edf0f5'} />
+                    </div>
+                    <span className='logoName'>Music</span>
+                    <div className='search'>
+                        <input className='searchInput'placeholder='Pesquise músicas, álbuns, artistas, podcasts' />
+                        <span className='searchIcon'><TfiSearch size={'18px'} color={'gray'}/></span>         
+                    </div>
                 </div>
-                <h2>Music</h2>
-            </div>
-            <div className='midDiv'>
-                <ul>
-                    <li>Início</li>
-                    <li>Explorar</li>
-                    <li>Biblioteca</li>
-                    <li className='searchMidDiv'>
-                        <span><TfiSearch size={'18px'}/></span>
-                        Pesquisar
-                    </li>
-                </ul>
-            </div>
-            <div className='rightDiv'>
-                <ul className='listRightDiv'>
-                    <li><MdCastConnected color={'#edf0f5'} size={'30px'} cursor={'pointer'}/></li>
-                    <li className='login'><span>M</span></li>
-                </ul>
-            </div>
-        </nav>
+                <div className='rightDiv'>
+                    <div className='login'><span>M</span></div>
+                </div>
+            </nav>
+            <SideBar/>
         </>
     )
 }
