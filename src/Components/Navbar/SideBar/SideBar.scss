@@ -1,0 +1,39 @@
+.sideBarFixed{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 66px;
+    height: 100vh;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid gray;
+    z-index: 9999;
+    margin-top: 60px;
+}
+
+.sideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 66px;
+    height: 100vh;
+}
+
+div{
+    .side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 10px;
+        font-size: 11px;
+        width: 56px;
+        height: 65px;
+        gap: 3px;
+    }
+    .side:hover{
+        background-color: #343434;
+        cursor: pointer;
+    }
+}
