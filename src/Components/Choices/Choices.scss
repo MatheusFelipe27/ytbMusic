@@ -1,9 +1,11 @@
 .choices{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 85%;
+    margin-left: 2%;
     .choicesBtn{
         display: flex;
-        width: 83%;
+        width: 85%;
         height: 96px;
         gap: 10px;
         button{
@@ -19,7 +21,7 @@
             cursor: pointer;
         }
         button:hover{
-            opacity: 0.75;
+            background-color: #343434;
         }
     }
 }

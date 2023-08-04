@@ -8,10 +8,9 @@
         display: grid;
         padding: 0;
         gap: 20px;
-        grid-template-columns: 16% 34% 34% 16%;
+        grid-template-columns: repeat(6,15.3%);
 
         li{
-            background-color: red;
             .firstDivListenAgain{
                 width: 100%;
                 .listenAgainImgDiv{

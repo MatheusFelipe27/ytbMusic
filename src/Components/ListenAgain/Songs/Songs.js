@@ -3,50 +3,58 @@ import notes from './../../../Images/notes.jpg'
 import tapes from './../../../Images/tapes.jpg'
 import {FaPlay} from 'react-icons/fa'
 
+const songs = [
+    {
+        name: "Notas musicais",
+        artist: "Musica. Matheus",
+        image: 'notes'
+    },
+    {
+        name: "Fitas de musica",
+        artist: "Musica. Matheus",
+        image: 'tapes'
+    },
+    {
+        name: "Notas musicais",
+        artist: "Musica. Matheus",
+        image: 'notes'
+    },
+    {
+        name: "Fitas de musica",
+        artist: "Musica. Matheus",
+        image: 'tapes'
+    },
+    {
+        name: "Notas musicais",
+        artist: "Musica. Matheus",
+        image: 'notes'
+    },
+    {
+        name: "Fitas de musica",
+        artist: "Musica. Matheus",
+        image: 'tapes'
+    },
+]
 const Songs = () =>{
     return(
         <div className="listenAgainSongs">
             <ul>
-                <li>
-                    <div className="firstDivListenAgain">
-                        <div className="listenAgainImgDiv">
-                            <span><FaPlay color={'white'} size={'28px'} /></span>
-                            <img className= 'listenAgainSongsPrimerImg' src={notes} alt="notas musicais"/>
-                        </div>
-                        <span className="up">Notas musicais</span>
-                        <span className="down">Música. Matheus</span>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <div className="listenAgainImgSecDiv">
-                            <span><FaPlay color={'white'} size={'28px'} /></span>
-                            <img className= 'listenAgainSongsFirstImg' src={tapes} alt="fitas de musica"/>
-                        </div>
-                        <span className="up">Fitas de música</span>
-                        <span className="down">Música. Matheus</span>
-                    </div>                    
-                </li>
-                <li>
-                    <div>
-                        <div className="listenAgainImgSecDiv">
-                            <span><FaPlay color={'white'} size={'28px'} /></span>
-                            <img className= 'listenAgainSongsFirstImg' src={notes} alt="notas musicais"/>
-                        </div>
-                        <span className="up">Notas musicais</span>
-                        <span className="down">Música. Matheus</span>
-                    </div>                    
-                </li>
-                <li>
-                    <div>
-                        <div className="listenAgainImgSecDiv">
-                            <span><FaPlay color={'white'} size={'28px'} /></span>
-                            <img className= 'listenAgainSongsFirstImg' src={tapes} alt="fitas de musica"/>
-                        </div>
-                        <span className="up">Fitas de música</span>
-                        <span className="down">Música. Matheus</span>
-                    </div>
-                </li>
+                {
+                    songs.map((song) =>
+                        <li>
+                            <div className="firstDivListenAgain">
+                                <div className="listenAgainImgDiv">
+                                    <span><FaPlay color={'white'} size={'28px'} /></span>
+                                    <img className= 'listenAgainSongsPrimerImg' 
+                                        src={song.image==='tapes'? tapes: notes} alt="notas musicais"
+                                    />
+                                </div>
+                                <span className="up">{song.name}</span>
+                                <span className="down">{song.artist}</span>
+                            </div>
+                        </li>
+                    )
+                }
             </ul>
         </div>
     )
