@@ -40,8 +40,8 @@ const Songs = () =>{
         <div className="listenAgainSongs">
             <ul>
                 {
-                    songs.map((song) =>
-                        <li>
+                    songs.map((song, index) =>
+                        <li key={index}>
                             <div className="firstDivListenAgain">
                                 <div className="listenAgainImgDiv">
                                     <span><FaPlay color={'white'} size={'28px'} /></span>

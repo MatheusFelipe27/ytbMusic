@@ -16,7 +16,21 @@ const Navbar =() =>{
         return () => {
           window.removeEventListener('scroll', updateNavbarPosition);
         };
-      }, []);
+    }, []);
+
+    useEffect(()=>{
+        if(navbarFixed){
+            document.getElementsByTagName('body')[0].style.background = "rgb(0,0,0, 1"
+            document.getElementsByTagName('body')[0].style.background= "linear-gradient(rgb(0,0,0,1)"
+        }
+        else{
+            document.getElementsByTagName('body')[0].style.background = "rgb(2,0,36)"
+            document.getElementsByTagName('body')[0].style.background =`linear-gradient(90deg, 
+            rgba(2,0,36,1) 0%, 
+            rgba(2,0,31,1) 3%, rgba(0,0,0,1) 20%, 
+            rgba(0,0,0,1) 80%, rgba(2,0,31,1) 97%, rgba(2,0,36,1) 100%)`;
+        }
+    },[navbarFixed])
 
     return(
         <>
