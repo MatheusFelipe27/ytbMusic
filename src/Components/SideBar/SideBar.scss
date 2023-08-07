@@ -2,11 +2,11 @@
     display: flex;
     position: fixed;
     flex-direction: column;
-    align-items: flex-end;
-    width: 66px;
+    align-items: center;
+    width: 72px;
     height: 100vh;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-right: 1px solid gray;
+    border-right: 1px solid rgba(128, 128, 128, 0.3);
     top: 60px;
     left: 0;
 }
@@ -15,8 +15,8 @@
     display: flex;
     position: fixed;
     flex-direction: column;
-    align-items: flex-end;
-    width: 66px;
+    align-items: center;
+    width: 72px;
     height: 100vh;
     top: 60px;
     left: 0px;
