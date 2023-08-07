@@ -6,7 +6,7 @@
     right: 0;
     left: 0;
     justify-content: space-between;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
     z-index: 9999;
     background: rgb(0,0,0, 1);
     background: linear-gradient(90deg, 0% rgb(0,0,0, 1), 100% rgb(0,0,0, 1))
@@ -27,7 +27,7 @@
 .leftSide{
     display: flex;
     align-items: center;
-    margin-left: 10px;
+    margin-left: 8px;
     
     .menuOutside{
         display: flex;
@@ -77,14 +77,19 @@
             font-size: 16px;
             color:white;
             outline: none;
-            border: gray 1px solid;
+            border: 1px solid rgba(128, 128, 128, 0.4);
             border-radius: 10px;
             background-color: #343434;
+
+            &:focus{
+                background-color: rgb(0,0,0, 1);
+            }
         }
         .searchIcon{
             position: absolute;
             top: 14px;
             left: 40px;
+            cursor: pointer;
         }
     }
 }
