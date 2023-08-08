@@ -1,15 +1,16 @@
-div{
+.divSideCollapsed{
     margin-left: 8px;
     .sideCollapsed{
         display: flex;
         align-items: center;
         color: white;
-        padding-left: 25px;
+        padding-left: 15px;
         border-radius: 10px;
         font-size: 16px;
-        width: 199px;
+        width: 209px;
         height: 48px;
         gap: 20px;
+        margin-top: 15px;
     }      
     .sideCollapsed:hover{
         background-color: #343434;

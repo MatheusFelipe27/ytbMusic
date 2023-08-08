@@ -5,19 +5,19 @@ import './SideBarCollapsed.scss'
 const SideBarCollapsed = () => {
   return(
     <>
-        <div> 
+        <div className='divSideCollapsed'> 
             <span className={'sideCollapsed'}>
                 <MdHomeFilled size={'26px'} color={'white'}/>
                 Início 
             </span>
         </div>    
-        <div>
+        <div className='divSideCollapsed'>
             <span className={'sideCollapsed'}>
                 <MdOutlineExplore size={'26px'} color={'white'}/>
                 Explorar
             </span>
         </div>
-        <div>
+        <div className='divSideCollapsed'>
             <span className={'sideCollapsed'}>
                 <MdLibraryMusic size={'26px'} color={'white'}/>
                 Biblioteca
