@@ -14,8 +14,6 @@ const SideBar = () =>{
             `${sideBarFixed? 'sideBarFixed' : 'sideBar'}${menuIsCollapsed.collapsedMenu? 'Collapsed': ''}`
         )
     },[menuIsCollapsed, sideBarFixed])
-
-    console.log(sideBarClass)
     
     const updateSideBarPosition = () => {
         window.scrollY > 0 ? setSideBarFixed(true) :setSideBarFixed(false);
