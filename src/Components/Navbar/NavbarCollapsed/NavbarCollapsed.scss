@@ -1,0 +1,107 @@
+.leftSideNotCollapsed{
+    display: flex;
+    position: fixed;
+    height: 60px;
+    align-items: center;
+    width: 234px;
+    background-color: rgb(0,0,0, 1);
+    border-right: 1px solid rgba(128, 128, 128, 0.3);
+    margin-left: 0;
+    padding-left: 7px;
+}
+.leftSideCollapsed{
+    display: flex;
+    position: fixed;
+    height: 60px;
+    align-items: center;
+    width: 235px;
+    background-color: rgb(0,0,0, 1);
+    margin-left: 0;
+    padding-left: 7px;
+}
+
+.menuOutsideCollapsed{
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    width: 60px;
+    .menuCollapsed{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        color: white;
+    }
+    .menuOutsideCollapsed:hover{
+        border-radius: 100%;
+    }
+    .menuCollapsed:hover{
+        background-color: #343434;
+    }
+}
+.logoCollapsed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    cursor: pointer;
+    margin-left: -10px;
+}
+.logoNameCollapsed{
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.searchCollapsed{
+    padding-left: 20px;
+    width: 71.2%;
+    position: relative;
+    margin-left: auto;
+    .searchInputCollapsed{
+        width: 400px;
+        height: 40px;
+        padding-left: 55px;
+        margin-left: 70px;
+        margin-top: 5px;
+        font-size: 16px;
+        color:white;
+        outline: none;
+        border: 1px solid rgba(128, 128, 128, 0.4);
+        border-radius: 10px;
+        background-color: #343434;
+
+        &:focus{
+            background-color: rgb(0,0,0, 1);
+        }
+    }
+    .searchIconCollapsed{
+        position: absolute;
+        top: 20px;
+        left: 115px;
+        cursor: pointer;
+    }
+}
+
+.rightDivCollapsed{
+    padding-top: 15px;
+    margin-right: 100px;
+    .loginCollapsed{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: 30px;
+        color: white;
+        height: 30px;
+        background-color: #7E57C2;
+        cursor: pointer;
+    }
+}
