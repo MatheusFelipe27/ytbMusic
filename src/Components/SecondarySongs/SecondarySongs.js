@@ -20,7 +20,7 @@ const SecondarySongs= () =>{
                    <ContentSecondary src={tapes} alt="fitas de musica"/>
                    <ContentSecondary src={notes} alt="notas musicais"/> 
                    <ContentSecondary src={tapes} alt="fitas de musica"/>
-
+{/* 
                    <ContentSecondary src={notes} alt="notas musicais"/> 
                    <ContentSecondary src={tapes} alt="fitas de musica"/>
                    <ContentSecondary src={notes} alt="notas musicais"/> 
@@ -32,7 +32,7 @@ const SecondarySongs= () =>{
                    <ContentSecondary src={notes} alt="notas musicais"/> 
                    <ContentSecondary src={tapes} alt="fitas de musica"/>
                    <ContentSecondary src={notes} alt="notas musicais"/> 
-                   <ContentSecondary src={tapes} alt="fitas de musica"/>
+                   <ContentSecondary src={tapes} alt="fitas de musica"/> */}
                    
                 </ul>
             </div>
