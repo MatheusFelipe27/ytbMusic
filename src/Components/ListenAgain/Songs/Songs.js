@@ -2,6 +2,7 @@ import './Songs.scss'
 import notes from './../../../Images/notes.jpg'
 import tapes from './../../../Images/tapes.jpg'
 import {FaPlay} from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 
 const songs = [
     {
@@ -36,12 +37,14 @@ const songs = [
     },
 ]
 const Songs = () =>{
+    const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
+
     return(
         <div className="listenAgainSongs">
-            <ul>
+            <ul className={isCollapsed? 'songsUlCollapsed' : 'songsUl'}>
                 {
                     songs.map((song, index) =>
-                        <li key={index}>
+                        <li className='songsLi' key={index}>
                             <div className="firstDivListenAgain">
                                 <div className="listenAgainImgDiv">
                                     <span><FaPlay color={'white'} size={'28px'} /></span>

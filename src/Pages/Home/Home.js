@@ -5,11 +5,14 @@ import "./Home.scss"
 import ListenAgain from "../../Components/ListenAgain/ListenAgain"
 import SecondarySongs from "../../Components/SecondarySongs/SecondarySongs"
 import Songs from "../../Components/ListenAgain/Songs/Songs"
+import { useSelector } from "react-redux"
 
 const Home=() =>{
+    const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
+
     return(
         <>
-            <div className="main">
+            <div className={isCollapsed? "mainCollapsed" : "main"}>
                 <Choices/>
                 <ListenAgain title="Ouvir novamente" subtitle="matheus felipe" logo="M"/>
                 <Songs/>

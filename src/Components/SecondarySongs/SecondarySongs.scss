@@ -2,16 +2,27 @@
     width: 83%;
     height: 240px;
     margin-bottom: 60px;
-    
-    .secondaryUl{
-        list-style: none;
-        display: grid;
-        height: 240px;
-        grid-template-columns: repeat(3, 33.33%);
-        grid-template-rows: repeat(4, 60px);
-        margin: 0;
-        padding: 0;
-        gap: 4px;
-    }
-
 }        
+.secondaryUl{
+    list-style: none;
+    display: grid;
+    height: 240px;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(4, 60px);
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+}
+
+.secondaryUlCollapsed{
+    list-style: none;
+    display: grid;
+    height: 240px;
+    grid-template-columns: repeat(3, 34%);
+    grid-template-rows: repeat(4, 60px);
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+    width: 95%;
+    margin-left: 1.5%;
+}
