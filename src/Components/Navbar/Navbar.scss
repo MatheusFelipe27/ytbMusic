@@ -43,6 +43,8 @@
     left: 0;
     border-bottom: 1px solid rgba(128, 128, 128, 0.3);
     justify-content: space-between;
+    background: rgb(0, 0, 0);
+    z-index: 9999;
 }
 
 .leftSide{

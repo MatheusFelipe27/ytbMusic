@@ -4,15 +4,13 @@ import { VscPlayCircle } from "react-icons/vsc";
 import { TfiSearch } from "react-icons/tfi";
 import { FiMenu } from "react-icons/fi";
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 
 const NavbarCollapsed = () => {
   const [searchColor, setSearchColor] = useState("gray")
   const [navbarFixed, setNavbarFixed] = useState(false)
   
   const dispatch = useDispatch()
-
-  console.log(navbarFixed)
 
   const updateNavbarPosition = () => {
     window.scrollY > 0 ? setNavbarFixed(true) : setNavbarFixed(false);
