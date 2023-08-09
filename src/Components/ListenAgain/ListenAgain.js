@@ -1,11 +1,13 @@
+import { useSelector } from 'react-redux'
 import './ListenAgain.scss'
 import {HiChevronLeft, HiChevronRight} from 'react-icons/hi'
  
 
 const ListenAgain = ( props) =>{
+    const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
     return(
         <>
-            <div className="listenAgain">
+            <div className={isCollapsed? "listenAgainCollapsed": "listenAgain"}>
                 <div className="listenAgainLeft">
                     {props.logo?
                     <div className="listenAgainFirst"><span>{props.logo}</span></div>

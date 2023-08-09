@@ -1,10 +1,12 @@
 import './Choices.scss'
-
+import { useSelector } from 'react-redux'
 const Choices = () =>{
+    const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
+
     return(
         <>
-        <div className="choices">
-            <div className="choicesBtn">
+        <div className={isCollapsed?"choicesCollapsed" : "choices"}>
+            <div className={isCollapsed? "choicesBtnCollapsed" : "choicesBtn"}>
                 <button> Relax</button>
                 <button>Energia</button>
                 <button>Podcasts</button>
