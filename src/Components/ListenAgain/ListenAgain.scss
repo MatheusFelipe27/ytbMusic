@@ -4,10 +4,12 @@
     width: 85%;
     margin-left: 1%;
     height: 96px;
+    align-items: flex-end;
 }
 .listenAgainCollapsed{
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     width: 82.7%;
     margin-left: 1%;
     height: 96px;
