@@ -5,7 +5,6 @@ import { useState } from 'react'
  
 const ListenAgain = ({id, logo, title, subtitle}) =>{
     const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
-    const renderPerClick = 6
     const dispatch = useDispatch()
     const getPagination = useSelector(state => state.pagination)
     const [enableRight, setEnableRight] = useState(true)
@@ -16,6 +15,7 @@ const ListenAgain = ({id, logo, title, subtitle}) =>{
     const nextClick = () =>{
         getPagination.map(val =>{
             if(val.componentId === id){
+                const renderPerClick = id >5 ? 12 : 6
                 if(val.start + renderPerClick <val.songsLength){
                     setEnableLeft(true)
                     const updated = { id: id, updatedData: val.start+ renderPerClick}
@@ -26,12 +26,14 @@ const ListenAgain = ({id, logo, title, subtitle}) =>{
                     setEnableLeft(true)
                 }
             }
+            return ''
         })
     }       
 
     const previousClick = () =>{
         getPagination.map(val =>{
             if(val.componentId === id){
+                const renderPerClick = id >5 ? 12 : 6
                 if(val.start - renderPerClick >=0){
                     setEnableRight(true)
                     const updated = { id: id, updatedData: val.start - renderPerClick}
@@ -42,6 +44,7 @@ const ListenAgain = ({id, logo, title, subtitle}) =>{
                     setEnableRight(true)
                 }
             }
+            return ''
         })   
     }
     
