@@ -1,21 +1,31 @@
 import './ContentSecondary.scss'
 import { BiDislike, BiLike, BiDotsVerticalRounded} from 'react-icons/bi'
 import { FaPlay } from 'react-icons/fa'
+import tapes from './../../../Images/tapes.jpg'
+import notes from './../../../Images/notes.jpg'
+import cds from './../../../Images/cds.jpg'
+import vinil from './../../../Images/vinil.jpg'
 
-const  ContentSecondary= (props) =>{
 
-    return(
-        
+const getImage = {
+    cds: cds,
+    tapes: tapes,
+    vinil: vinil,
+    notes: notes
+}
+const ContentSecondary= ({songs}) =>{
+    
+    return(   
         <li className='secondaryLi'>
             <div className='contentSecondary'>
                 <div className='imgPlaceSecondary'>
                     <div className='imgInsideSecondary'>
                         <span className='playSecondary'><FaPlay size={'16px'} /></span>
-                        <img className="imgSecondary" src={props.src} alt={props.alt}/>
+                        <img className="imgSecondary" src={getImage[songs.image]} alt={songs.alt}/>
                     </div>
                     <div className='textSecondary'>
-                        <span className='upSecondary'>Not Today</span>
-                        <span className='downSecondary'>Matheus Felipe</span>
+                        <span className='upSecondary'>{songs.name}</span>
+                        <span className='downSecondary'>{songs.artist}</span>
                     </div>
                 </div>
                 <div className='btnSecondary'>
