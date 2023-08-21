@@ -6,7 +6,7 @@ import ListenAgain from "../../Components/ListenAgain/ListenAgain"
 import SecondarySongs from "../../Components/SecondarySongs/SecondarySongs"
 import Songs from "../../Components/ListenAgain/Songs/Songs"
 import { useSelector } from "react-redux"
-import { songs, songsTwo, songsThree, songsFour } from "../../mockData/mock"
+import { songs, songsTwo, songsThree, songsFour, secondarySongs } from "../../mockData/mock"
 
 
 const Home=() =>{
@@ -20,7 +20,7 @@ const Home=() =>{
                 <Songs id={0} songs={songs}/>
 
                 <ListenAgain id={10}title="Escolhas rápidas" subtitle="Iniciar rádio com música"/>
-                <SecondarySongs/>
+                <SecondarySongs id = {10} songs = {secondarySongs}/>
                 
                 <ListenAgain id={1} title="Videoclipes recomendados"/>
                 <Songs id={1} songs={songsTwo}/>
@@ -30,7 +30,7 @@ const Home=() =>{
                 <Songs id={3} songs={songsFour}/>
 
                 <ListenAgain id= {11} title="Covers e remixes"/>
-                <SecondarySongs id={11}/>
+                <SecondarySongs id={11} songs = {secondarySongs}/>
             </div>
         </>
     )
