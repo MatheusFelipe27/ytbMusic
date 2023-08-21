@@ -70,4 +70,47 @@ export const songs = [
     { name: 'Emerald Twilight', artist: 'Verdant Nocturnes', image: 'notes' }
   ];
   
+  export const secondarySongs = [
+    { name: "Skyline Serenade", artist: "Aria Nova", image: "cds", alt: "cds de música" },
+    { name: "Whispering Meadows", artist: "Eclipse Echo", image: "vinil", alt: "retrato de vinil" },
+    { name: "Rhythm Reverie", artist: "Harmony Harmony", image: "notes", alt: "notas musicais" },
+    { name: "Melody Mirage", artist: "Echo Ensemble", image: "tapes", alt: "fitas de música" },
+    { name: "Mystic Groove", artist: "Solstice Sound", image: "cds", alt: "cds de música" },
+    { name: "Enchanted Echoes", artist: "Luna Lyric", image: "vinil", alt: "retrato de vinil" },
+    { name: "Harbor Harmony", artist: "Marina Melodies", image: "notes", alt: "notas musicais" },
+    { name: "Serenade Sands", artist: "Horizon Hues", image: "tapes", alt: "fitas de música" },
+    { name: "Twilight Tango", artist: "Nova Nocturne", image: "cds", alt: "cds de música" },
+    { name: "Starlight Sonata", artist: "Celestial Cadence", image: "vinil", alt: "retrato de vinil" },
+    { name: "Dreamland Duet", artist: "Aurora Anthem", image: "notes", alt: "notas musicais" },
+    { name: "Melodic Mirage", artist: "Echo Empyrean", image: "tapes", alt: "fitas de música" },
+    { name: "Sapphire Symphony", artist: "Azure Aria", image: "cds", alt: "cds de música" },
+    { name: "Golden Gleam", artist: "Radiant Rhapsody", image: "vinil", alt: "retrato de vinil" },
+    { name: "Whispering Willow", artist: "Sylvan Serenade", image: "notes", alt: "notas musicais" },
+    { name: "Harmonic Horizon", artist: "Mystic Melody", image: "tapes", alt: "fitas de música" },
+    { name: "Ethereal Echo", artist: "Cascading Chords", image: "cds", alt: "cds de música" },
+    { name: "Luminous Lullaby", artist: "Dawn Duette", image: "vinil", alt: "retrato de vinil" },
+    { name: "Moonlit Melodies", artist: "Nocturne Nexus", image: "notes", alt: "notas musicais" },
+    { name: "Harmony Haven", artist: "Serene Sonata", image: "tapes", alt: "fitas de música" },
+    { name: "Velvet Voices", artist: "Aether Aria", image: "cds", alt: "cds de música" },
+    { name: "Celestial Cadence", artist: "Stellar Serenade", image: "vinil", alt: "retrato de vinil" },
+    { name: "Dreamer's Delight", artist: "Echoing Elysium", image: "notes", alt: "notas musicais" },
+    { name: "Melody Mirage", artist: "Sonic Skyline", image: "tapes", alt: "fitas de música" },
+    { name: "Whispering Woods", artist: "Vesper Verse", image: "cds", alt: "cds de música" },
+    { name: "Oceanic Overture", artist: "Cerulean Chords", image: "vinil", alt: "retrato de vinil" },
+    { name: "Enchanted Embrace", artist: "Harmonic Hush", image: "notes", alt: "notas musicais" },
+    { name: "Lullaby Lagoon", artist: "Serenity Strings", image: "tapes", alt: "fitas de música" },
+    { name: "Moonbeam Melody", artist: "Lunar Lilt", image: "cds", alt: "cds de música" },
+    { name: "Whimsical Waltz", artist: "Mystic Minuet", image: "vinil", alt: "retrato de vinil" },
+    { name: "Cascade Concerto", artist: "Ripple Rhapsody", image: "notes", alt: "notas musicais" },
+    { name: "Serenity Serenade", artist: "Ethereal Echo", image: "tapes", alt: "fitas de música" },
+    { name: "Harbor Harmony", artist: "Aqua Aria", image: "cds", alt: "cds de música" },
+    { name: "Dusk Duet", artist: "Twilight Tune", image: "vinil", alt: "retrato de vinil" },
+    { name: "Mystic Melodies", artist: "Sonic Solstice", image: "notes", alt: "notas musicais" },
+    { name: "Luminous Lagoon", artist: "Radiant Rhapsody", image: "tapes", alt: "fitas de música" },
+    { name: "Crescent Chords", artist: "Lunar Lyric", image: "cds", alt: "cds de música" },
+    { name: "Starlit Sonata", artist: "Celestial Cadence", image: "vinil", alt: "retrato de vinil" },
+    { name: "Harmonic Horizon", artist: "Echoing Ether", image: "notes", alt: "notas musicais" },
+    { name: "Mystic Mirage", artist: "Enchanted Echo", image: "tapes", alt: "fitas de música" }
+  ];
+  
   
