@@ -8,6 +8,8 @@ const initialState =[
     { componentId: 1, start: 0, songsLength: 0 },
     { componentId: 2, start: 0, songsLength: 0 },
     { componentId: 3, start: 0, songsLength: 0 },
+    { componentId: 10, start: 0, songsLength: 0},
+    { componentId: 11, start: 0, songsLength: 0}
 
 ]
 
