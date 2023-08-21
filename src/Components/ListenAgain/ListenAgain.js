@@ -1,21 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux'
 import './ListenAgain.scss'
 import {HiChevronLeft, HiChevronRight} from 'react-icons/hi'
+import { useState } from 'react'
  
 const ListenAgain = ({id, logo, title, subtitle}) =>{
     const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
     const renderPerClick = 6
     const dispatch = useDispatch()
     const getPagination = useSelector(state => state.pagination)
+    const [enableRight, setEnableRight] = useState(true)
+    const [enableLeft, setEnableLeft] = useState(false)
 
-    console.log(getPagination)
+
     
     const nextClick = () =>{
         getPagination.map(val =>{
             if(val.componentId === id){
                 if(val.start + renderPerClick <val.songsLength){
+                    setEnableLeft(true)
                     const updated = { id: id, updatedData: val.start+ renderPerClick}
                     dispatch({type: 'PAGINATION', payload: updated})
+                }
+                if(val.start + renderPerClick*2 >val.songsLength){
+                    setEnableRight(false)
+                    setEnableLeft(true)
                 }
             }
         })
@@ -25,8 +33,13 @@ const ListenAgain = ({id, logo, title, subtitle}) =>{
         getPagination.map(val =>{
             if(val.componentId === id){
                 if(val.start - renderPerClick >=0){
+                    setEnableRight(true)
                     const updated = { id: id, updatedData: val.start - renderPerClick}
                     dispatch({type: 'PAGINATION', payload: updated})
+                }
+                if(val.start - renderPerClick*2 <0){
+                    setEnableLeft(false)
+                    setEnableRight(true)
                 }
             }
         })   
@@ -48,9 +61,23 @@ const ListenAgain = ({id, logo, title, subtitle}) =>{
                     </div>
                 </div>
                 <div className="listenAgainRight">
-                    <button>Mais</button>
-                    <button className="btnListenAgain" onClick={previousClick} ><HiChevronLeft size={'20px'} fontWeight={'bolder'}/></button>
-                    <button className="btnListenAgain" onClick={nextClick}><HiChevronRight size={'20px'} fontWeight={'bolder'}/></button>
+                    <button className='mais'>Mais</button>
+                    <button 
+                        className= {enableLeft? "btnListenAgain" : "btnListenAgainDisabled"} 
+                        onClick={previousClick} 
+                        disabled = {!enableLeft} 
+                    >
+                        <HiChevronLeft 
+                        size={'20px'} fontWeight={'bolder'}/>
+                    </button>
+                    <button 
+                        className= {enableRight? "btnListenAgain" : "btnListenAgainDisabled"} 
+                        onClick={nextClick}
+                        disabled = {!enableRight}
+                    >
+                        <HiChevronRight size={'20px'} 
+                        fontWeight={'bolder'}/>
+                    </button>
                 </div>
             </div>
         </>
