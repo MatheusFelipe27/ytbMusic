@@ -1,29 +1,86 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import './ListenAgain.scss'
 import {HiChevronLeft, HiChevronRight} from 'react-icons/hi'
+import { useState } from 'react'
  
-
-const ListenAgain = ( props) =>{
+const ListenAgain = ({id, logo, title, subtitle}) =>{
     const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
+    const dispatch = useDispatch()
+    const getPagination = useSelector(state => state.pagination)
+    const [enableRight, setEnableRight] = useState(true)
+    const [enableLeft, setEnableLeft] = useState(false)
+
+
+    
+    const nextClick = () =>{
+        getPagination.map(val =>{
+            if(val.componentId === id){
+                const renderPerClick = id >5 ? 12 : 6
+                if(val.start + renderPerClick <val.songsLength){
+                    setEnableLeft(true)
+                    const updated = { id: id, updatedData: val.start+ renderPerClick}
+                    dispatch({type: 'PAGINATION', payload: updated})
+                }
+                if(val.start + renderPerClick*2 >val.songsLength){
+                    setEnableRight(false)
+                    setEnableLeft(true)
+                }
+            }
+            return ''
+        })
+    }       
+
+    const previousClick = () =>{
+        getPagination.map(val =>{
+            if(val.componentId === id){
+                const renderPerClick = id >5 ? 12 : 6
+                if(val.start - renderPerClick >=0){
+                    setEnableRight(true)
+                    const updated = { id: id, updatedData: val.start - renderPerClick}
+                    dispatch({type: 'PAGINATION', payload: updated})
+                }
+                if(val.start - renderPerClick*2 <0){
+                    setEnableLeft(false)
+                    setEnableRight(true)
+                }
+            }
+            return ''
+        })   
+    }
+    
     return(
         <>
             <div className={isCollapsed? "listenAgainCollapsed": "listenAgain"}>
                 <div className="listenAgainLeft">
-                    {props.logo?
-                    <div className="listenAgainFirst"><span>{props.logo}</span></div>
+                    {logo?
+                    <div className="listenAgainFirst"><span>{logo}</span></div>
                     :""
                     }
                     <div className="listenAgainSecond">
-                        {props.subtitle?<span style={{textTransform: "uppercase"}}>{props.subtitle}</span>
+                        {subtitle?<span style={{textTransform: "uppercase"}}>{subtitle}</span>
                             : <span style={{color:'transparent'}}>*</span>
                         }
-                        <span>{props.title}</span>
+                        <span>{title}</span>
                     </div>
                 </div>
                 <div className="listenAgainRight">
-                    <button>Mais</button>
-                    <button className="btnListenAgain" onClick={()=>console.log("works")} ><HiChevronLeft size={'20px'} fontWeight={'bolder'}/></button>
-                    <button className="btnListenAgain"><HiChevronRight size={'20px'} fontWeight={'bolder'}/></button>
+                    <button className='mais'>Mais</button>
+                    <button 
+                        className= {enableLeft? "btnListenAgain" : "btnListenAgainDisabled"} 
+                        onClick={previousClick} 
+                        disabled = {!enableLeft} 
+                    >
+                        <HiChevronLeft 
+                        size={'20px'} fontWeight={'bolder'}/>
+                    </button>
+                    <button 
+                        className= {enableRight? "btnListenAgain" : "btnListenAgainDisabled"} 
+                        onClick={nextClick}
+                        disabled = {!enableRight}
+                    >
+                        <HiChevronRight size={'20px'} 
+                        fontWeight={'bolder'}/>
+                    </button>
                 </div>
             </div>
         </>

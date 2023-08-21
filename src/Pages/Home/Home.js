@@ -6,6 +6,8 @@ import ListenAgain from "../../Components/ListenAgain/ListenAgain"
 import SecondarySongs from "../../Components/SecondarySongs/SecondarySongs"
 import Songs from "../../Components/ListenAgain/Songs/Songs"
 import { useSelector } from "react-redux"
+import { songs, songsTwo, songsThree, songsFour, secondarySongs } from "../../mockData/mock"
+
 
 const Home=() =>{
     const isCollapsed = useSelector(state => state.collapsedMenu.collapsedMenu)
@@ -14,18 +16,21 @@ const Home=() =>{
         <>
             <div className={isCollapsed? "mainCollapsed" : "main"}>
                 <Choices/>
-                <ListenAgain title="Ouvir novamente" subtitle="matheus felipe" logo="M"/>
-                <Songs/>
-                <ListenAgain title="Escolhas rápidas" subtitle="Iniciar rádio com música"/>
-                <SecondarySongs/>
-                <ListenAgain title="Videoclipes recomendados"/>
-                <Songs/>
-                <ListenAgain title="Melhores pop" subtitle= "Sua recomendação" logo="MP"/>
-                <Songs/>
-                <ListenAgain title="Mixtapes criadas para você"/>
-                <Songs/>
-                <ListenAgain title="Covers e remixes"/>
-                <SecondarySongs/>
+                <ListenAgain id={0} title="Ouvir novamente" subtitle="matheus felipe" logo="M"/>
+                <Songs id={0} songs={songs}/>
+
+                <ListenAgain id={10}title="Escolhas rápidas" subtitle="Iniciar rádio com música"/>
+                <SecondarySongs id = {10} songs = {secondarySongs}/>
+                
+                <ListenAgain id={1} title="Videoclipes recomendados"/>
+                <Songs id={1} songs={songsTwo}/>
+                <ListenAgain id={2} title="Melhores pop" subtitle= "Sua recomendação" logo="MP"/>
+                <Songs id={2} songs={songsThree}/>
+                <ListenAgain id={3} title="Mixtapes criadas para você"/>
+                <Songs id={3} songs={songsFour}/>
+
+                <ListenAgain id= {11} title="Covers e remixes"/>
+                <SecondarySongs id={11} songs = {secondarySongs}/>
             </div>
         </>
     )

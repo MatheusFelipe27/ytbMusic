@@ -1,3 +1,9 @@
 const COLLAPSED_MENU = 'COLLAPSED_MENU'
+const PAGINATION ='PAGINATION'
+const GET_LEN = 'GET_LEN'
 
-export {COLLAPSED_MENU}
+export {
+    COLLAPSED_MENU, 
+    PAGINATION,
+    GET_LEN
+}
